@@ -1,0 +1,272 @@
+body {
+    background-color: black;
+    color: #D9DADB;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    overflow-x: hidden;
+}
+
+
+
+.btn-custom {
+    background: #0A84FF;
+    color: white;
+    font-size: 1rem;
+    padding: 7.5px 15px;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+}
+
+.nametext {
+    font-size: 10rem;
+}
+
+.textanim {
+    font-weight: 600;
+    background: linear-gradient(to right,
+            #7953cd 20%,
+            #00affa 30%,
+            #0190cd 70%,
+            #764ada 80%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+    background-size: 500% auto;
+    animation: textShine 5s ease-in-out infinite alternate;
+}
+
+@keyframes textShine {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+.bluetext {
+    color: #20B2F8;
+}
+
+.headingtext {
+    font-size: 6rem;
+    font-weight: 600;
+
+}
+
+.skilltext {
+    font-size: 3.5rem;
+    font-weight: 450;
+}
+
+.uptextanim {
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.bbt {
+    font-size: 2.6rem;
+    font-weight: 500;
+}
+
+.sbt {
+    font-size: 1.2rem;
+
+}
+
+.cardtext {
+    color: #85888B;
+    font-size: 1.35rem;
+}
+
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+    height: 6px;
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 3px;
+}
+
+/* Ensure cards align with heading */
+@media (min-width: 992px) {
+    .position-relative {
+        padding-left: 3rem;
+    }
+}
+
+.d-inline-flex {
+    gap: 2rem !important;
+}
+
+.card {
+    display: inline-block;
+    vertical-align: top;
+    white-space: normal;
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    width: 100%;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 4px;
+    height: 100%;
+    background: #ccc;
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    position: relative;
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.timeline-item:nth-child(odd) {
+    left: 0;
+    text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+    text-align: left;
+}
+
+.timeline-dot {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    background: #007bff;
+    border-radius: 50%;
+    transform: translateX(-50%);
+}
+
+
+
+.skills-wrapper {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    width: 100%;
+}
+
+.skills-track {
+    display: flex;
+    gap: 50px;
+    animation: scrollLeft 20s linear infinite;
+}
+
+.skill-item {
+    font-size: 2.0rem;
+    font-weight: 300;
+    color: #A1A1A6;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    display: inline-block;
+}
+
+.section-heading {
+    font-size: 4rem;
+    font-weight: 600;
+    letter-spacing: -0.015em;
+    position: relative;
+    padding-left: 20px;
+}
+
+.section-heading::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 60%;
+    width: 3px;
+    background: var(--apple-blue);
+}
+
+.skill-item:hover {
+    color: #0A84FF;
+    transform: scale(1.1);
+}
+
+.scrolling-wrapper {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+.card {
+    display: inline-block;
+}
+
+.cardstyle {
+    background-color: black;
+    width: 400px;
+}
+.mainpicture{
+    height: 40%;width:40% ; border-radius: 25px;
+}
+
+
+/* Horizontal Scroll Animation */
+@keyframes scrollLeft {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+
+
+
+@media all and (max-width: 768px) {
+    .nametext {
+        font-size: 4.5rem;
+    }
+    .mainpicture{
+        height:90%;
+        width: 90%;
+    }
+
+    .cardtext {
+        width: 300px;
+    }
+
+    .skill-item {
+        font-size: 2rem;
+    }
+
+    .headingtext {
+        font-size: 3.5rem;
+    }
+
+    .cardtext {
+        font-size: 1rem;
+    }
+
+    .bbt {
+        font-size: 1.6rem;
+    }
+
+    .sbt {
+        font-size: 0.8rem;
+    }
+
+    .skilltext {
+        font-size: 3rem;
+    }
+}
